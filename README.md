@@ -1,56 +1,55 @@
 
-//--------------------------------------------------
-GIT:
 
+# GIT:
+```
 git init
 git remote add origin https://github.com/gutierr3z/reactpractice4.git
 git remote -v
-
+```
 create README.md
-
+```
 git add .
 git commit -m 'initial commit'
-
+```
 // push the current branch and set the remote as upstream
+```
 git push -u origin master
-
+```
 create .gitignore
-
+```
     node_modules
     www/bundle.js
-
-//--------------------------------------------------
-NPM:
-
+```
+# NPM:
+```
 npm init -y
-
-//--------------------------------------------------
-BABEL:
-
+```
+# BABEL:
+```
 npm install --save babel-core
 npm install --save babel-preset-latest
 npm install --save babel-preset-react
-
+```
 create .babelrc
-
+```
 {
     "presets": [
         ["latest", { "modules": false }],
         "react"
     ]
 }
-
-//--------------------------------------------------
-WEBPACK:
-
+```
+# WEBPACK:
+```
 npm install --save webpack babel-loader
-
+```
 create src/app.js
 create webpack.config.js
 
 
 
 (webpack.config.js)-----
+```javascript
 const path = require('path');
 
 module.exports = {
@@ -90,8 +89,8 @@ module.exports = {
    ],
  },
 };
-//--------------------------------------------------
-EXPRESS:
+```
+# EXPRESS:
 
 npm install --save express webpack-dev-middleware
 
@@ -99,6 +98,7 @@ create server.js
 create www/index.html
 
 (server.js)-----
+```javascript
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
@@ -124,32 +124,36 @@ const server = app.listen( process.env.PORT || 3000, function() {
   const port = server.address().port;
   console.log('Example app listening at 3000');
 });
-//--------------------------------------------------
-REACT:
-
+```
+# REACT:
+```
 npm install --save react react-dom
+```
 
-//--------------------------------------------------
-DEPLOY:
+# DEPLOY:
 
-add 
+add:
+```
     "compile": "webpack", 
     "start": "node server.js",
-
+```
 to package.json's scripts
 
 execute compile command:
 
+```
 npm run compile
+```
 
-//--------------------------------------------------
-CSS MODULES
+
+# CSS MODULES
 
 npm install --save-dev css-loader
 npm install --save style-loader
 npm install --save extract-text-webpack-plugin
 
 (webpack.config.js)-----
+```javascript
 module: {
    rules: [
      {
@@ -177,3 +181,4 @@ module: {
      }
    ]
  },
+ ```
