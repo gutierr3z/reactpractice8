@@ -4,10 +4,14 @@ import ReactDom from 'react-dom';
 
 //==================================================
 var Item = ( props ) => {
+
+    var name = props.user.name;
+    var phone = props.user.phone;
+
     return (
         <li>
-            { props.user.name }<br />
-            { props.user.phone }
+            { name }<br />
+            { phone }
         </li>
     );
 };

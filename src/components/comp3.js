@@ -15,7 +15,6 @@ class Comp3 extends React.Component {
         return (
             <div className="comp3">
                 Comp3
-
                 <List users={ this.props.users } />
             </div>
         );
