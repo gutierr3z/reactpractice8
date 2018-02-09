@@ -132,12 +132,11 @@ npm install --save react react-dom
 
 # DEPLOY:
 
-add:
+add to package.json's scripts:
 ```
     "compile": "webpack", 
     "start": "node server.js",
 ```
-to package.json's scripts
 
 execute compile command:
 
