@@ -3,6 +3,8 @@ import ReactDom from 'react-dom';
 //--------------------------------------------------
 import Comp1 from './components/Comp1';
 import Comp2 from './components/Comp2';
+import Comp3 from './components/Comp3';
+
 //==================================================
 class App extends React.Component {
 
@@ -11,7 +13,7 @@ class App extends React.Component {
         this.state = {
             users: []
         };
-        
+
         var api = 'http://jsonplaceholder.typicode.com/users';
 
         fetch( api ).then( results => {
@@ -27,6 +29,7 @@ class App extends React.Component {
             <div className = "app">
                 <Comp1 />
                 <Comp2 />
+                <Comp3 users={ this.state.users } />
             </div>
         );
     }
